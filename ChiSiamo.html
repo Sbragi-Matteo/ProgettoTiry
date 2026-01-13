@@ -12,7 +12,23 @@
         color: #f5f5f5; 
         background: linear-gradient(135deg, #ff6f61, #d66a59); 
       }
-    
+      /* NAVBAR */
+    .navbar {
+      background-color: #1f1f1f;
+    }
+      .navbar-brand {
+        font-weight: 600;
+        color: #ffffff;
+      }
+      .navbar-nav .nav-link {
+        color: #ffffff !important;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-right: 20px;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #ffc107 !important;
+      }
       section.py-5 {
         padding: 5rem 0;
         background-color: #ffffff;
@@ -137,37 +153,37 @@
           margin-bottom: 1.5rem;
         }
       }
+      /* FOOTER */
+    footer {
+      background-color: #1f1f1f;
+      color: #bbb;
+      padding: 30px 0;
+      font-size: 14px;
+    }
     </style>
     
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
-   <!--DA AGGIUNGERE I LINK A TUTTA LA NAVBAR-->
-   <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" >Chi siamo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="Index.html">Pagina principale</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#"> I nostri servizi</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contattaci</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">🛒</a>
-            </li>
-          </ul>
-        </div>    
+   <!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#">CHI SIAMO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="Index.html">Pagina iniziale</a></li>
+        <li class="nav-item"><a class="nav-link" href="Servizi.html">Servizi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contattaci</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">🛒</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <section class="py-5 bg-light position-relative overflow-hidden">
 
@@ -177,6 +193,7 @@
 
         <div class="mb-3">
             <h1 class="fw-bold display-5">
+              <br>
             BRAND
             </h1>
         </div>
@@ -339,6 +356,16 @@
   
     </div>
   </section>
+
+   <!-- FOOTER -->
+   <footer class="text-center">
+    <p>© 2026 Tiribocchi • Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
 
   </body>
 </html>

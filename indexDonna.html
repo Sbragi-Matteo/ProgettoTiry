@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiribocchi | Jeans Shop</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fa;
+      }
+
+      /* NAVBAR */
+      .navbar {
+        background-color: #1f1f1f;
+      }
+      .navbar-brand {
+        font-weight: 700;
+      }
+      .nav-link {
+        color: #fff !important;
+        margin-right: 15px;
+      }
+      .nav-link:hover {
+        color: #ffc107 !important;
+      }
+
+      /* SECTION TITLE */
+      .section-title {
+        font-weight: 600;
+        margin-bottom: 40px;
+      }
+
+      /* PRODUCT CARD */
+      .product-card {
+        width: 18rem;
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      .product-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      }
+      .product-img {
+        height: 320px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        font-weight: 600;
+      }
+      .price {
+        font-weight: 600;
+        color: #1f1f1f;
+      }
+
+      /* BUTTON */
+      .btn-dark-custom {
+        background-color: #1f1f1f;
+        color: #fff;
+        border-radius: 30px;
+        padding: 10px 25px;
+      }
+      .btn-dark-custom:hover {
+        background-color: #ffc107;
+        color: #000;
+      }
+
+      /* FOOTER */
+      footer {
+        background-color: #1f1f1f;
+        color: #bbb;
+        padding: 30px 0;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand text-white" href="Index.html">PAGINA INIZIALE</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="ChiSiamo.html">CHI SIAMO</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">SERVIZI</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">CONTATTACI</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">🛒</a></li>
+          </ul>
+        </div>
+
+        <form class="d-flex">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                  FILTRI
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="Index.html">Tutti</a></li>
+                  <li><a class="dropdown-item" href="indexUomo.html">Uomo</a></li>
+                  <li><a class="dropdown-item" href="indexDonna.html">Donna</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+    <br><br><br>
+
+    <!-- PRODUCTS -->
+    <section id="prodotti" class="py-5">
+      <div class="container">
+        <h2 class="text-center section-title">I nostri jeans</h2>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+
+          <!-- CARD 1 -->
+          <div class="col d-flex justify-content-center">
+            <div class="card product-card">
+              <img src="Immagine7.png" class="card-img-top product-img" alt="Jeans">
+              <div class="card-body text-center">
+                <h5 class="card-title">Straight leg uomo</h5>
+                <p class="price">€69,90</p>
+                <a href="AggiuntaCarrello.html" class="btn btn-dark-custom">Aggiungi 🛒</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="col d-flex justify-content-center">
+            <div class="card product-card">
+              <img src="Immagine8.png" class="card-img-top product-img" alt="Jeans">
+              <div class="card-body text-center">
+                <h5 class="card-title">Balloon donna</h5>
+                <p class="price">€74,90</p>
+                <a href="AggiuntaCarrello.html" class="btn btn-dark-custom">Aggiungi 🛒</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="col d-flex justify-content-center">
+            <div class="card product-card">
+              <img src="Immagine9.png" class="card-img-top product-img" alt="Jeans">
+              <div class="card-body text-center">
+                <h5 class="card-title">Flared uomo</h5>
+                <p class="price">€79,90</p>
+                <a href="AggiuntaCarrello.html" class="btn btn-dark-custom">Aggiungi 🛒</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="col d-flex justify-content-center">
+            <div class="card product-card">
+              <img src="Immagine10.png" class="card-img-top product-img" alt="Jeans">
+              <div class="card-body text-center">
+                <h5 class="card-title">Flared uomo</h5>
+                <p class="price">€79,90</p>
+                <a href="AggiuntaCarrello.html" class="btn btn-dark-custom">Aggiungi 🛒</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 5 -->
+          <div class="col d-flex justify-content-center">
+            <div class="card product-card">
+              <img src="Immagine11.png" class="card-img-top product-img" alt="Jeans">
+              <div class="card-body text-center">
+                <h5 class="card-title">Baggy uomo marroni</h5>
+                <p class="price">€79,90</p>
+                <a href="AggiuntaCarrello.html" class="btn btn-dark-custom">Aggiungi 🛒</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 6 -->
+          <div class="col d-flex justify-content-center">
+            <div class="card product-card">
+              <img src="Immagine12.png" class="card-img-top product-img" alt="Jeans">
+              <div class="card-body text-center">
+                <h5 class="card-title">Baggy uomo</h5>
+                <p class="price">€79,90</p>
+                <a href="AggiuntaCarrello.html" class="btn btn-dark-custom">Aggiungi 🛒</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center">
+      <p>© 2026 Tiribocchi • Tutti i diritti riservati.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
