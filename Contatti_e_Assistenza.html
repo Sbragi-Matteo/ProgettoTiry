@@ -2,111 +2,206 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Assistenza clienti</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Tiribocchi</a>
+  <title>Assistenza clienti – Tiribocchi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- STILE COLORE SCHEDE -->
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #ff6f61, #d66a59);
+      color: #333;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: #1f1f1f;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #ffffff !important;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 6rem 1rem 4rem;
+      text-align: center;
+      background-color: #ffffff;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+    }
+
+    /* SEZIONI */
+    section {
+      background-color: #ffffff;
+    }
+
+    .section-box {
+      padding: 4rem 0;
+    }
+
+    /* CARD COLORATE */
+    .card {
+      border: 0;
+      border-radius: 12px;
+      color: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    /* CARD SINGOLE COLORATE */
+    .card.resi { background: linear-gradient(135deg, #ff6f61, #ff9472); }
+    .card.spedizione { background: linear-gradient(135deg, #6a11cb, #2575fc); }
+    .card.ordini { background: linear-gradient(135deg, #00c6ff, #0072ff); }
+    .card.shopping { background: linear-gradient(135deg, #f7971e, #ffd200); }
+    .card.azienda { background: linear-gradient(135deg, #ff5f6d, #ffc371); }
+
+    /* CONTENUTI CARD */
+    .card h5, .card p {
+      color: #fff;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1f1f1f;
+      color: #cccccc;
+      padding: 3rem 0 1.5rem;
+    }
+
+    footer a {
+      color: #cccccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ffc107;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #333;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      font-size: 0.85rem;
+      color: #999;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Contattaci</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarMain">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">I nostri servizi</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Contattaci</a></li>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="Index.html">Pagina iniziale</a></li>
+        <li class="nav-item"><a class="nav-link" href="ChiSiamo.html">Chi siamo</a></li>
+        <li class="nav-item"><a class="nav-link" href="Servizi.html">Servizi</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">🛒</a></li>
       </ul>
-
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Cerca">
-        <button class="btn btn-outline-success" type="submit">Cerca</button>
-      </form>
     </div>
   </div>
 </nav>
-<section class="bg-light py-5 text-center">
+
+<!-- HERO -->
+<section class="hero mt-5">
   <div class="container">
-    <h1 class="fw-bold">Hai bisogno di aiuto?</h1>
-    <p class="text-muted">Trova subito le risposte alle tue domande</p>
-    <input class="form-control form-control-lg mt-4" type="search"
+    <h1 class="display-5">Hai bisogno di aiuto?</h1>
+    <p class="text-muted fs-5">Trova subito le risposte alle tue domande</p>
+    <input class="form-control form-control-lg mt-4"
+           type="search"
            placeholder="Come possiamo aiutarti?">
   </div>
 </section>
-<section class="container py-5">
-  <h3 class="fw-bold">Soluzioni rapide</h3>
-  <p class="text-muted">Le risposte alle domande più frequenti</p>
-  <div class="row g-4 mt-3">
-    <div class="col-md-6 col-lg-4">
-      <a href="info.html#resi" class="text-decoration-none">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Resi e cambi</h5>
-            <p class="card-text text-muted">
-              Politica resi, cambi e rimborsi
-            </p>
-          </div>
-        </div>
-      </a>
+
+<!-- SOLUZIONI RAPIDE -->
+<section class="section-box">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3>Soluzioni rapide</h3>
+      <p class="text-muted">Le risposte alle domande più frequenti</p>
     </div>
-    <div class="col-md-6 col-lg-4">
-      <a href="info.html#spedizione" class="text-decoration-none">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Spedizione e consegna</h5>
-            <p class="card-text text-muted">
-              Opzioni di spedizione e ritiro
-            </p>
+
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <a href="info.html#resi" class="text-decoration-none">
+          <div class="card h-100 p-3 resi">
+            <h5 class="fw-bold">Resi e cambi</h5>
+            <p class="mb-0">Politica resi, cambi e rimborsi</p>
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <a href="info.html#ordini" class="text-decoration-none">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Ordini e pagamenti</h5>
-            <p class="card-text text-muted">
-              Stato ordini e metodi di pagamento
-            </p>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="info.html#spedizione" class="text-decoration-none">
+          <div class="card h-100 p-3 spedizione">
+            <h5 class="fw-bold">Spedizione e consegna</h5>
+            <p class="mb-0">Opzioni di spedizione e ritiro</p>
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <a href="info.html#shopping" class="text-decoration-none">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Shopping</h5>
-            <p class="card-text text-muted">
-              Taglie, consigli e codici promo
-            </p>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="info.html#ordini" class="text-decoration-none">
+          <div class="card h-100 p-3 ordini">
+            <h5 class="fw-bold">Ordini e pagamenti</h5>
+            <p class="mb-0">Stato ordini e metodi di pagamento</p>
           </div>
-        </div>
-      </a>
-    </div>
-    <div class="col-md-6 col-lg-4">
-      <a href="info.html#azienda" class="text-decoration-none">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Informazioni sull’azienda</h5>
-            <p class="card-text text-muted">
-              Tiribocchi, sostenibilità e policy
-            </p>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="info.html#shopping" class="text-decoration-none">
+          <div class="card h-100 p-3 shopping">
+            <h5 class="fw-bold">Shopping</h5>
+            <p class="mb-0">Taglie, consigli e codici promo</p>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+        <a href="info.html#azienda" class="text-decoration-none">
+          <div class="card h-100 p-3 azienda">
+            <h5 class="fw-bold">Informazioni sull’azienda</h5>
+            <p class="mb-0">Brand, sostenibilità e policy</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
-<section class="bg-light py-5">
+
+<!-- CONTATTI -->
+<section class="section-box bg-light">
   <div class="container">
-    <h3 class="fw-bold">Contattaci</h3>
-    <hr>
-    <div class="row">
+    <div class="text-center mb-4">
+      <h3>Contattaci</h3>
+      <p class="text-muted">Siamo qui per aiutarti</p>
+    </div>
+
+    <div class="row text-center">
       <div class="col-md-4">
         <h6 class="fw-bold">Chat</h6>
         <p>8:00 – 20:00<br>Lunedì – Sabato</p>
@@ -122,6 +217,8 @@
     </div>
   </div>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class
