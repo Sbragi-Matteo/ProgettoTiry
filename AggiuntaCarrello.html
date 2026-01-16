@@ -1,32 +1,215 @@
-
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tiribocchi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-secondary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="Index.html">Pagina principale</a>
-                </li>
-              </ul>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tiribocchi | Carrello</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+      background-color: #1f1f1f;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+    }
+
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
+
+    .cart-item img {
+      width: 80px;
+      border-radius: 10px;
+    }
+
+    .box-info {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    }
+
+    .btn-dark-custom {
+      background-color: #1f1f1f;
+      color: #fff;
+      border-radius: 30px;
+      padding: 10px 25px;
+    }
+
+    .btn-dark-custom:hover {
+      background-color: #ffc107;
+      color: #000;
+    }
+
+    footer {
+      background-color: #1f1f1f;
+      color: #bbb;
+      padding: 25px 0;
+      font-size: 14px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="Index.html">TIRIBOCCHI</a>
+
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="Index.html">PAGINA INIZIALE</a></li>
+        <li class="nav-item"><a class="nav-link" href="ChiSiamo.html">CHI SIAMO</a></li>
+        <li class="nav-item"><a class="nav-link" href="Servizi.html">SERVIZI</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENUTO -->
+<section class="container py-5 flex-grow-1">
+  <h2 class="mb-4">🛒 Il tuo carrello</h2>
+
+  <div class="row">
+    <!-- COLONNA CARRELLO -->
+    <div class="col-lg-8">
+      <div id="cartItems"></div>
+    </div>
+
+    <!-- COLONNA RIEPILOGO -->
+    <div class="col-lg-4">
+      <div class="box-info mb-4">
+        <h5>Riepilogo ordine</h5>
+        <hr>
+        <p>Subtotale: <strong id="totalPrice">€0,00</strong></p>
+        <p>Spedizione: <strong>Gratuita</strong></p>
+        <p class="fw-bold fs-5">Totale: <span id="totalPrice2">€0,00</span></p>
+
+        <button class="btn btn-dark-custom w-100 mt-3" onclick="checkout()">
+          Procedi all'acquisto
+        </button>
+      </div>
+
+      <div class="box-info mb-4">
+        <h6>🚚 Spedizione & Resi</h6>
+        <p class="mb-1">Spedizione gratuita in 48/72h</p>
+        <p class="mb-0">Reso facile entro 14 giorni</p>
+      </div>
+
+      <div class="box-info">
+        <h6>🔒 Pagamenti sicuri</h6>
+        <p class="mb-1">Carte di credito</p>
+        <p class="mb-1">PayPal</p>
+        <p class="mb-0">Bonifico bancario</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VANTAGGI -->
+  <div class="row mt-5 text-center">
+    <div class="col-md-4">
+      <h5>⭐ Qualità Premium</h5>
+      <p>Denim selezionato e lavorato artigianalmente</p>
+    </div>
+    <div class="col-md-4">
+      <h5>♻️ Sostenibilità</h5>
+      <p>Processi produttivi a basso impatto ambientale</p>
+    </div>
+    <div class="col-md-4">
+      <h5>🇮🇹 Made in Italy</h5>
+      <p>Design e produzione italiana</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center">
+  <p>© 2026 Tiribocchi • Tutti i diritti riservati.</p>
+</footer>
+
+<!-- SCRIPT CARRELLO -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function renderCart() {
+  const container = document.getElementById("cartItems");
+  container.innerHTML = "";
+  let total = 0;
+
+  if (cart.length === 0) {
+    container.innerHTML = "<p>Il carrello è vuoto.</p>";
+    document.getElementById("totalPrice").innerText = "€0,00";
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    total += item.price * item.qty;
+    container.innerHTML += `
+      <div class="card mb-3">
+        <div class="card-body d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="${item.image}" alt="${item.name}">
+            <div class="ms-3">
+              <h6>${item.name}</h6>
+              <p>€${item.price.toFixed(2)}</p>
             </div>
+          </div>
+          <input type="number" min="1" value="${item.qty}" onchange="updateQty(${index}, this.value)" class="form-control" style="width:70px">
+          <button class="btn btn-danger btn-sm" onclick="removeItem(${index})">✖</button>
         </div>
-    </nav>
-  </body>
-  <footer class="fixed-bottom text-center bg-dark text-white">
-    <p>
-      Tutti i diritti riservati.
-    </p>
-  </footer>
-</html>  
+      </div>
+    `;
+  });
+
+  document.getElementById("totalPrice").innerText = "€" + total.toFixed(2);
+}
+
+function updateQty(index, qty) {
+  cart[index].qty = parseInt(qty);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+function removeItem(index) {
+  cart.splice(index, 1);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+}
+
+function checkout() {
+  if(cart.length === 0){
+    alert("Il carrello è vuoto!");
+    return;
+  }
+  alert("✅ Acquisto completato!");
+  localStorage.removeItem("cart");
+  renderCart();
+}
+
+// inizializza la visualizzazione
+renderCart();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
