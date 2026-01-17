@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tiribocchi | Denim Store</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -14,32 +13,89 @@
       font-family: 'Poppins', sans-serif;
       background-color: #f8f9fa;
     }
-    .navbar { background-color: #1f1f1f; }
-    .navbar-brand { font-weight: 700; letter-spacing: 1px; }
-    .nav-link { color: #fff !important; margin-right: 15px; }
-    .nav-link:hover { color: #ffc107 !important; }
+    .navbar {
+       background-color: #1f1f1f; 
+    }
+    .navbar-brand { 
+      font-weight: 700; 
+      letter-spacing: 1px; 
+    }
+    .nav-link { 
+      color: #fff !important; 
+      margin-right: 15px; 
+    }
+    .nav-link:hover { 
+      color: #ffc107 !important; 
+    }
 
-    .carousel-item { height: 75vh; }
-    .carousel-item img { height: 100%; width: 100%; object-fit: cover; filter: brightness(65%); }
-    .hero-text { position: absolute; top:50%; left:50%; transform: translate(-50%, -50%); color:#fff; text-align:center; }
-    .hero-text h1 { font-size:3rem; font-weight:700; }
+    .carousel-item { 
+      height: 75vh; 
+    }
+    .carousel-item img { 
+      height: 100%; 
+      width: 100%; 
+      object-fit: 
+      cover; 
+      filter: brightness(65%); 
+    }
+    .hero-text { 
+      position: absolute; 
+      top:50%; 
+      left:50%; 
+      transform: translate(-50%, -50%); 
+      color:#fff; 
+      text-align:center; 
+    }
+    .hero-text h1 { 
+      font-size:3rem; 
+      font-weight:700; 
+    }
 
-    .section-title { font-weight:600; margin-bottom:40px; }
+    .section-title { 
+      font-weight:600; 
+      margin-bottom:40px; 
+    }
 
-    .product-card { border:none; border-radius:15px; overflow:hidden; transition: all 0.3s ease; }
-    .product-card:hover { transform: translateY(-8px); box-shadow:0 15px 30px rgba(0,0,0,0.15); }
-    .product-card img { height: 320px; object-fit: cover; }
-    .price { font-weight:600; color:#1f1f1f; }
+    .product-card { 
+      border:none; 
+      border-radius:15px; 
+      overflow:hidden; 
+      transition: all 0.3s ease; 
+    }
+    .product-card:hover { 
+      transform: translateY(-8px); 
+      box-shadow:0 15px 30px rgba(0,0,0,0.15); 
+    }
+    .product-card img { 
+      height: 320px; 
+      object-fit: cover; 
+    }
+    .price { 
+      font-weight:600; 
+      color:#1f1f1f; 
+    }
 
-    .btn-dark-custom { background-color: #1f1f1f; color:#fff; border-radius:30px; padding:10px 25px; }
-    .btn-dark-custom:hover { background-color:#ffc107; color:#000; }
+    .btn-dark-custom { 
+      background-color: #1f1f1f; 
+      color:#fff; 
+      border-radius:30px; 
+      padding:10px 25px; 
+    }
+    .btn-dark-custom:hover { 
+      background-color:#ffc107; 
+      color:#000; 
+    }
 
-    footer { background-color:#1f1f1f; color:#bbb; padding:30px 0; font-size:14px; }
+    footer { 
+      background-color:#1f1f1f; 
+      color:#bbb; 
+      padding:30px 0; 
+      font-size:14px; 
+    }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
     <a class="navbar-brand text-white" href="#">TIRIBOCCHI</a>
@@ -49,12 +105,20 @@
         <li class="nav-item"><a class="nav-link" href="Servizi.html">SERVIZI</a></li>
         <li class="nav-item"><a class="nav-link" href="Contatti_e_Assistenza.html">CONTATTACI</a></li>
         <li class="nav-item"><a class="nav-link" href="AggiuntaCarrello.html">🛒</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtri
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="indexUomo.html">Uomo</a></li>
+            <li><a class="dropdown-item" href="indexDonna.html">Donna</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="mb-5">
   <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -72,14 +136,12 @@
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section id="prodotti" class="py-5">
   <div class="container">
     <h2 class="text-center section-title">I nostri jeans</h2>
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-      <!-- CARD 1 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine1.png" class="card-img-top">
@@ -91,7 +153,6 @@
         </div>
       </div>
 
-      <!-- CARD 2 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine2.png" class="card-img-top">
@@ -103,7 +164,6 @@
         </div>
       </div>
 
-      <!-- CARD 3 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine3.png" class="card-img-top">
@@ -115,7 +175,6 @@
         </div>
       </div>
 
-      <!-- CARD 4 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine4.png" class="card-img-top">
@@ -127,7 +186,6 @@
         </div>
       </div>
 
-      <!-- CARD 5 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine5.png" class="card-img-top">
@@ -139,7 +197,6 @@
         </div>
       </div>
 
-      <!-- CARD 6 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine6.png" class="card-img-top">
@@ -151,7 +208,6 @@
         </div>
       </div>
 
-      <!-- CARD 7 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine7.png" class="card-img-top">
@@ -163,7 +219,6 @@
         </div>
       </div>
 
-      <!-- CARD 8 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine8.png" class="card-img-top">
@@ -175,7 +230,6 @@
         </div>
       </div>
 
-      <!-- CARD 9 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine9.png" class="card-img-top">
@@ -187,7 +241,6 @@
         </div>
       </div>
 
-      <!-- CARD 10 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine10.png" class="card-img-top">
@@ -199,7 +252,6 @@
         </div>
       </div>
 
-      <!-- CARD 11 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine11.png" class="card-img-top">
@@ -211,7 +263,6 @@
         </div>
       </div>
 
-      <!-- CARD 12 -->
       <div class="col">
         <div class="card product-card">
           <img src="Immagine12.png" class="card-img-top">
@@ -233,21 +284,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-function addToCart(name, price, image) {
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
-  let existing = cart.find(item => item.name === name);
-  if(existing) {
-    existing.qty += 1;
-  } else {
-    cart.push({name:name, price:price, image:image, qty:1});
-  }
-
-  localStorage.setItem('cart', JSON.stringify(cart));
-  alert(name + " aggiunto al carrello!");
-}
-</script>
 
 </body>
 </html>
